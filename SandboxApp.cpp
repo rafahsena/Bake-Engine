@@ -1,5 +1,19 @@
-#include "Engine/Bake.h"
+#include <Bake.h>
 
-int main() {
-    Bake::Print();
+class Sandbox : public Bake::Application
+{
+public:
+    Sandbox()
+    {
+
+    }
+
+    ~Sandbox()
+    {
+
+    }
+};
+
+Bake::Application* Bake::CreateApplication() {
+    return new Sandbox();
 }

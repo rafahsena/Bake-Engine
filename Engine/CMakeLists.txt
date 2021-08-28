@@ -3,4 +3,8 @@ project(Bake_Engine)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_library(Bake_Engine SHARED Entrypoint.cpp Bake.h)
+include_directories(vendor/spdlog/include)
+
+file(GLOB SOURCES **/*.cpp Bake.h)
+
+add_library(Bake_Engine SHARED ${SOURCES})
